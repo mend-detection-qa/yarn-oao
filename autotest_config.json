@@ -1,0 +1,171 @@
+{
+    "description": "Autotest configuration file for dependency tree detection validation",
+    "version": 1.5,
+    "base_config": {
+        "validate_scan_output": true,
+        "_comment_validate_scan_output": "Whether to validate the scan output/exit code. Options: true | false. Default: true",
+        "scan_output": {
+            "_security_scan_report_conclusion": "failure",
+            "_comment_security_scan_report_conclusion": "Optional. Expected scan report conclusion. Options: 'success' | 'failure'. This validates the security scan result status. If not provided, this check will not be performed.",
+            "total_libs_scanned": {
+                "eq": 102
+            },
+            "_comment_total_libs_scanned": "Expected number of libraries scanned with comparison operator. Validates that the scan processed libraries."
+        },
+        "validate_dependency_tree": true,
+        "_comment_validate_dependency_tree": "Whether to validate the dependency tree. Options: true | false. Default: true",
+        "dependency_tree": {
+            "check_dependency_tree_detection_status": true,
+            "_comment_check_dependency_tree_detection_status": "Whether to check if dependency tree was successfully detected. Options: true | false. Default: true",
+            "expected_total_dependencies_number": {
+                "eq": 107
+            },
+            "expected_direct_dependencies_number": {
+                "eq": 14
+            },
+            "expected_transitive_dependencies_number": {
+                "eq": 93
+            },
+            "_comment_expected_dependencies_number": "Optional. Expected number of dependencies with comparison operator. Operators: gt (>), gte (>=), lt (<), lte (<=), eq (==). If not provided, this check will not be performed.",
+            "direct_dependencies_names_list": {
+                "eq": [
+                    "storyboard-3.3.1.tgz",
+                    "commander-2.19.0.tgz",
+                    "minimatch-3.0.4.tgz",
+                    "rimraf-2.6.3.tgz",
+                    "inquirer-6.2.2.tgz",
+                    "execa-0.6.3.tgz",
+                    "semver-5.6.0.tgz",
+                    "globby-6.1.0.tgz",
+                    "timm-1.6.2.tgz",
+                    "shelljs-0.8.4.tgz",
+                    "storyboard-listener-console-3.3.1.tgz",
+                    "storyboard-listener-console-parallel-3.3.1.tgz",
+                    "split-1.0.1.tgz",
+                    "kebab-case-1.0.0.tgz"
+                ]
+            },
+            "transitive_dependencies_names_list": {
+                "eq": [
+                    "ansi-escapes-3.2.0.tgz",
+                    "npm-run-path-2.0.2.tgz",
+                    "chalk-1.1.3.tgz",
+                    "ansi-styles-3.2.1.tgz",
+                    "escape-string-regexp-1.0.5.tgz",
+                    "brace-expansion-1.1.11.tgz",
+                    "pseudomap-1.0.2.tgz",
+                    "path-parse-1.0.5.tgz",
+                    "chalk-2.4.2.tgz",
+                    "async-kit-2.2.3.tgz",
+                    "is-promise-2.1.0.tgz",
+                    "path-key-2.0.1.tgz",
+                    "get-stream-3.0.0.tgz",
+                    "lodash-4.17.11.tgz",
+                    "cli-cursor-2.1.0.tgz",
+                    "inherits-2.0.4.tgz",
+                    "tree-kit-0.5.26.tgz",
+                    "concat-map-0.0.1.tgz",
+                    "which-1.3.0.tgz",
+                    "object-assign-4.1.1.tgz",
+                    "path-is-absolute-1.0.1.tgz",
+                    "iconv-lite-0.4.24.tgz",
+                    "is-fullwidth-code-point-2.0.0.tgz",
+                    "figures-2.0.0.tgz",
+                    "rechoir-0.6.2.tgz",
+                    "ansi-regex-2.1.1.tgz",
+                    "strip-ansi-5.0.0.tgz",
+                    "ansi-regex-4.0.0.tgz",
+                    "pinkie-promise-2.0.1.tgz",
+                    "pify-2.3.0.tgz",
+                    "glob-7.1.3.tgz",
+                    "is-stream-1.1.0.tgz",
+                    "array-union-1.0.2.tgz",
+                    "strip-ansi-3.0.1.tgz",
+                    "once-1.4.0.tgz",
+                    "timm-1.6.1.tgz",
+                    "wrappy-1.0.2.tgz",
+                    "through-2.3.8.tgz",
+                    "tslib-1.9.3.tgz",
+                    "nextgen-events-0.9.9.tgz",
+                    "rxjs-6.4.0.tgz",
+                    "p-finally-1.0.0.tgz",
+                    "glob-7.1.4.tgz",
+                    "restore-cursor-2.0.0.tgz",
+                    "signal-exit-3.0.2.tgz",
+                    "ansi-regex-3.0.0.tgz",
+                    "strip-eof-1.0.0.tgz",
+                    "balanced-match-1.0.0.tgz",
+                    "mute-stream-0.0.7.tgz",
+                    "color-name-1.1.3.tgz",
+                    "xregexp-3.2.0.tgz",
+                    "string-kit-0.5.27.tgz",
+                    "safer-buffer-2.1.2.tgz",
+                    "semver-5.7.0.tgz",
+                    "string-width-2.1.1.tgz",
+                    "color-convert-1.9.0.tgz",
+                    "supports-color-2.0.0.tgz",
+                    "interpret-1.0.3.tgz",
+                    "shebang-regex-1.0.0.tgz",
+                    "glob-7.1.2.tgz",
+                    "array-uniq-1.0.3.tgz",
+                    "uuid-3.1.0.tgz",
+                    "platform-1.3.3.tgz",
+                    "strip-ansi-4.0.0.tgz",
+                    "inflight-1.0.6.tgz",
+                    "lru-cache-4.1.1.tgz",
+                    "os-tmpdir-1.0.2.tgz",
+                    "resolve-1.4.0.tgz",
+                    "has-flag-3.0.0.tgz",
+                    "lodash-4.17.15.tgz",
+                    "pinkie-2.0.4.tgz",
+                    "fs.realpath-1.0.0.tgz",
+                    "run-async-2.3.0.tgz",
+                    "cross-spawn-5.1.0.tgz",
+                    "tmp-0.0.33.tgz",
+                    "ansi-styles-2.2.1.tgz",
+                    "yallist-2.1.2.tgz",
+                    "terminal-kit-0.26.2.tgz",
+                    "external-editor-3.0.3.tgz",
+                    "mimic-fn-1.1.0.tgz",
+                    "storyboard-core-3.3.1.tgz",
+                    "shebang-command-1.2.0.tgz",
+                    "cli-width-2.1.0.tgz",
+                    "has-ansi-2.0.0.tgz",
+                    "supports-color-5.5.0.tgz",
+                    "onetime-2.0.1.tgz",
+                    "chardet-0.7.0.tgz",
+                    "isexe-2.0.0.tgz"
+                ]
+            },
+            "_comment_dependencies_names_list": "Optional. Check specific libraries in direct dependencies. Operators: eq (==), contains (all items from expected list in actual), in(all items from actual list in expected), nin(actual list does not contain provided libs). If not provided, this check will not be performed.",
+            "validate_agent_versions": true,
+            "expected_agent_version": "",
+            "expected_plugin_version": "",
+            "_comment_agent_versions": "Optional. Expected agent and plugin versions. If not provided, this check will not be performed."
+        },
+        "validate_vulnerabilities_table": true,
+        "_comment_validate_vulnerabilities_table": "Whether to validate the vulnerabilities table. Options: true | false. Default: true",
+        "vulnerabilities_table": {
+            "check_vulnerabilities_table_structure": true,
+            "expected_total_vulnerabilities_number": {
+                "gte": 0
+            },
+            "vulnerabilities_ids_list": {
+                "contains": []
+            },
+            "_comment_ids_names_list": "Optional. Check specific libs ids (WS-2018-0111, CVE-2021-44906). Operators: eq (==), contains (all items from expected list in actual), in(all items from actual list in expected), nin(actual list does not contain provided libs). If not provided, this check will not be performed.",
+            "vulnerabilities_names_list": {
+                "contains": []
+            },
+            "_comment_vulnerabilities_names_list": "Optional. Check specific libs names (minimist-0.0.8.tgz). Operators: eq (==), contains (all items from expected list in actual), in(all items from actual list in expected), nin(actual list does not contain provided libs). If not provided, this check will not be performed."
+        },
+        "validate_scanner_logs": true,
+        "_comment_validate_scanner_logs": "Whether to validate scanner logs. Options: true | false. Default: false",
+        "logs": {
+            "check_scanner_logs": true,
+            "_comment_check_scanner_logs": "Whether to check scanner logs and attach them to Report Portal. Options: true | false. Default: true",
+            "expected_log_lines": [],
+            "_comment_expected_log_lines": "Optional. List of log lines to validate. Each entry should have an 'operator' (eq or regex) and 'value' (string or regex pattern). Example: [{'operator': 'eq', 'value': 'Python version: 3.11'}, {'operator': 'regex', 'value': 'Python version: \\d+\\.\\d+'}]. If not provided, only log attachment will be performed."
+        }
+    }
+}
